@@ -22,11 +22,11 @@ export function Practice() {
               <h3 className="font-serif text-xl text-cream">Where</h3>
             </div>
             <p className="text-cream/70 leading-relaxed">
-              We practice in Leuven, Belgium. Our sessions take place in a quiet, 
+              We practice at HH Heverlee in Leuven, Belgium. Our sessions take place in a quiet, 
               dedicated space that allows for focused, mindful training.
             </p>
             <p className="text-cream/50 mt-4 text-sm">
-              Exact location shared upon registration
+              HH Heverlee, Leuven
             </p>
           </div>
           
@@ -39,11 +39,11 @@ export function Practice() {
               <h3 className="font-serif text-xl text-cream">When</h3>
             </div>
             <p className="text-cream/70 leading-relaxed">
-              Regular group practice sessions are held weekly. 
+              Regular group practice sessions are held weekly on Friday evenings. 
               Private instruction and intensive workshops are also available.
             </p>
-            <p className="text-cream/50 mt-4 text-sm">
-              Contact us for the current schedule
+            <p className="text-jade/80 mt-4 font-serif text-lg">
+              Friday Evenings: 19:00 – 21:00
             </p>
           </div>
         </div>

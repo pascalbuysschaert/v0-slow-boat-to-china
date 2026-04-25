@@ -15,7 +15,7 @@ const lineageMembers = [
     role: 'Chuan Cheng Academy',
   },
   {
-    name: 'Our Instructor',
+    name: 'Erik Elsemans',
     chinese: null,
     role: 'Student of Master Liang',
   },
