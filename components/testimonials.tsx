@@ -1,18 +1,18 @@
 const testimonials = [
   {
-    quote: "Taijiquan has become more than exercise for me—it's a daily meditation, a way of understanding myself and the world around me. The teaching here is patient and profound.",
+    quote: "Taijiquan is voor mij meer dan beweging geworden—het is een dagelijkse meditatie, een manier om mezelf en de wereld om me heen te begrijpen. Het onderwijs hier is geduldig en diepgaand.",
     author: "Maria K.",
-    years: "3 years of practice",
+    years: "3 jaar beoefening",
   },
   {
-    quote: "I came for the health benefits but discovered something much deeper. The authentic lineage teaching makes all the difference—you can feel the depth of tradition in every movement.",
+    quote: "Ik kwam voor de gezondheidsvoordelen maar ontdekte iets veel diepers. Het authentieke lijn-onderwijs maakt alle verschil—je voelt de diepte van de traditie in elke beweging.",
     author: "Thomas B.",
-    years: "5 years of practice",
+    years: "5 jaar beoefening",
   },
   {
-    quote: "As someone who had tried Tai Chi before, I was amazed at the difference authentic instruction makes. The attention to detail and the philosophical depth have transformed my practice.",
+    quote: "Als iemand die eerder Tai Chi had geprobeerd, was ik verbaasd over het verschil dat authentiek onderwijs maakt. De aandacht voor detail en de filosofische diepte hebben mijn beoefening getransformeerd.",
     author: "Sophie L.",
-    years: "2 years of practice",
+    years: "2 jaar beoefening",
   },
 ]
 
@@ -22,9 +22,9 @@ export function Testimonials() {
       <div className="max-w-5xl mx-auto px-6">
         {/* Section header */}
         <div className="text-center mb-16">
-          <span className="text-jade text-sm tracking-[0.3em] uppercase">Voices</span>
+          <span className="text-jade text-sm tracking-[0.3em] uppercase">Stemmen</span>
           <h2 className="font-serif text-3xl md:text-4xl text-ink mt-4">
-            From Our Practitioners
+            Van Onze Beoefenaars
           </h2>
         </div>
         

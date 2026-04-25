@@ -38,17 +38,17 @@ export function Contact() {
         <div className="text-center mb-12">
           <span className="text-jade text-sm tracking-[0.3em] uppercase">Begin</span>
           <h2 className="font-serif text-3xl md:text-4xl text-ink mt-4 text-balance">
-            Start Your Journey
+            Start Jouw Reis
           </h2>
           <p className="text-ink/60 mt-4">
-            Interested in joining our practice? Send us a message.
+            Interesse om mee te oefenen? Stuur ons een bericht.
           </p>
         </div>
         
         {/* Location info */}
         <div className="text-center mb-10 py-4 border-y border-border">
           <p className="text-ink/70">
-            <span className="text-jade">✦</span> Located in <strong>Leuven, Belgium</strong>
+            <span className="text-jade">✦</span> Gevestigd in <strong>Leuven, België</strong>
           </p>
         </div>
         
@@ -56,15 +56,15 @@ export function Contact() {
         {isSubmitted ? (
           <div className="text-center py-12 bg-cream rounded-lg border border-jade/20">
             <div className="text-jade text-4xl mb-4">☯</div>
-            <h3 className="font-serif text-xl text-ink mb-2">Thank you for reaching out</h3>
-            <p className="text-ink/60">We will be in touch with you soon.</p>
+            <h3 className="font-serif text-xl text-ink mb-2">Bedankt voor je bericht</h3>
+            <p className="text-ink/60">We nemen binnenkort contact met je op.</p>
           </div>
         ) : (
           <form onSubmit={handleSubmit} className="space-y-6">
             {/* Name */}
             <div>
               <label htmlFor="name" className="block text-sm text-ink/70 mb-2">
-                Your Name
+                Jouw Naam
               </label>
               <input
                 type="text"
@@ -74,14 +74,14 @@ export function Contact() {
                 value={formState.name}
                 onChange={handleChange}
                 className="w-full px-4 py-3 bg-cream border border-border rounded-lg focus:border-jade focus:ring-1 focus:ring-jade/20 outline-none transition-colors text-ink placeholder:text-ink/30"
-                placeholder="Enter your name"
+                placeholder="Vul je naam in"
               />
             </div>
             
             {/* Email */}
             <div>
               <label htmlFor="email" className="block text-sm text-ink/70 mb-2">
-                Email Address
+                E-mailadres
               </label>
               <input
                 type="email"
@@ -91,14 +91,14 @@ export function Contact() {
                 value={formState.email}
                 onChange={handleChange}
                 className="w-full px-4 py-3 bg-cream border border-border rounded-lg focus:border-jade focus:ring-1 focus:ring-jade/20 outline-none transition-colors text-ink placeholder:text-ink/30"
-                placeholder="your@email.com"
+                placeholder="jouw@email.com"
               />
             </div>
             
             {/* Experience level */}
             <div>
               <label htmlFor="experience" className="block text-sm text-ink/70 mb-2">
-                Experience with Taijiquan
+                Ervaring met Taijiquan
               </label>
               <select
                 id="experience"
@@ -107,18 +107,18 @@ export function Contact() {
                 onChange={handleChange}
                 className="w-full px-4 py-3 bg-cream border border-border rounded-lg focus:border-jade focus:ring-1 focus:ring-jade/20 outline-none transition-colors text-ink"
               >
-                <option value="">Select your experience level</option>
-                <option value="none">Complete beginner</option>
-                <option value="some">Some experience with Tai Chi</option>
-                <option value="intermediate">Intermediate practitioner</option>
-                <option value="advanced">Advanced / many years of practice</option>
+                <option value="">Selecteer je ervaringsniveau</option>
+                <option value="none">Volledige beginner</option>
+                <option value="some">Enige ervaring met Tai Chi</option>
+                <option value="intermediate">Gevorderde beoefenaar</option>
+                <option value="advanced">Vergevorderd / vele jaren ervaring</option>
               </select>
             </div>
             
             {/* Message */}
             <div>
               <label htmlFor="message" className="block text-sm text-ink/70 mb-2">
-                Message <span className="text-ink/40">(optional)</span>
+                Bericht <span className="text-ink/40">(optioneel)</span>
               </label>
               <textarea
                 id="message"
@@ -127,7 +127,7 @@ export function Contact() {
                 value={formState.message}
                 onChange={handleChange}
                 className="w-full px-4 py-3 bg-cream border border-border rounded-lg focus:border-jade focus:ring-1 focus:ring-jade/20 outline-none transition-colors text-ink placeholder:text-ink/30 resize-none"
-                placeholder="Tell us about yourself or any questions you have..."
+                placeholder="Vertel ons over jezelf of stel je vragen..."
               />
             </div>
             
@@ -137,7 +137,7 @@ export function Contact() {
               disabled={isSubmitting}
               className="w-full py-4 bg-ink text-cream rounded-lg font-medium hover:bg-ink/90 focus:ring-2 focus:ring-jade focus:ring-offset-2 focus:ring-offset-cream-dark transition-all disabled:opacity-50 disabled:cursor-not-allowed"
             >
-              {isSubmitting ? 'Sending...' : 'Send Message'}
+              {isSubmitting ? 'Verzenden...' : 'Verstuur Bericht'}
             </button>
           </form>
         )}

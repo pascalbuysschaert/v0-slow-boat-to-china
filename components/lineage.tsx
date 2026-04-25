@@ -1,28 +1,28 @@
 const lineageMembers = [
   {
-    name: 'Grandmaster Gu Lisheng',
+    name: 'Grootmeester Gu Lisheng',
     chinese: '顧麗生',
-    role: 'Source of the transmission',
+    role: 'Bron van de overdracht',
   },
   {
-    name: 'Master Chi Qingsheng',
+    name: 'Meester Chi Qingsheng',
     chinese: '池慶生',
-    role: 'Senior disciple',
+    role: 'Senior leerling',
   },
   {
-    name: 'Master Liang Dehua',
+    name: 'Meester Liang Dehua',
     chinese: '梁德華',
     role: 'Chuan Cheng Academy',
   },
   {
     name: 'Erik Elsemans',
     chinese: null,
-    role: 'Student of Master Liang',
+    role: 'Leerling van Meester Liang',
   },
   {
     name: 'Small Boat To China',
     chinese: null,
-    role: 'Practice group in Leuven',
+    role: 'Oefengroep in Leuven',
   },
 ]
 
@@ -32,13 +32,13 @@ export function Lineage() {
       <div className="max-w-3xl mx-auto px-6">
         {/* Section header */}
         <div className="text-center mb-16">
-          <span className="text-jade text-sm tracking-[0.3em] uppercase">Transmission</span>
+          <span className="text-jade text-sm tracking-[0.3em] uppercase">Overdracht</span>
           <h2 className="font-serif text-3xl md:text-4xl text-ink mt-4 text-balance">
-            The Lineage
+            De Lijn
           </h2>
           <p className="text-ink/60 mt-4 max-w-xl mx-auto leading-relaxed">
-            Authentic Taijiquan is transmitted from teacher to student in an unbroken chain. 
-            We are honored to be part of this living tradition.
+            Authentiek Taijiquan wordt overgedragen van leraar op leerling in een 
+            ononderbroken keten. Wij zijn vereerd deel uit te maken van deze levende traditie.
           </p>
         </div>
         

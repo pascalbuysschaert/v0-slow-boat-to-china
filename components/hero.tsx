@@ -75,7 +75,7 @@ export function Hero() {
           </h1>
           
           <p className="font-serif text-lg md:text-xl lg:text-2xl text-cream/70 italic mb-8 text-balance">
-            A journey inward through Yang-style Taijiquan
+            Een innerlijke reis door Yang-stijl Taijiquan
           </p>
           
           {/* Chinese characters accent */}
@@ -94,7 +94,7 @@ export function Hero() {
               className="inline-flex flex-col items-center text-cream/40 hover:text-jade transition-colors group"
               aria-label="Scroll to learn more"
             >
-              <span className="text-sm tracking-widest uppercase mb-2">Discover</span>
+              <span className="text-sm tracking-widest uppercase mb-2">Ontdek</span>
               <svg 
                 className="w-5 h-5 animate-bounce" 
                 fill="none" 

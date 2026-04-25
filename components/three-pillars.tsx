@@ -1,18 +1,18 @@
 const pillars = [
   {
-    title: 'Body',
+    title: 'Lichaam',
     chinese: '身',
-    description: 'Through precise postures and flowing movement, we cultivate a relaxed, aligned, and responsive physical form. The body becomes the vessel for deeper practice.',
+    description: 'Door precieze houdingen en vloeiende bewegingen cultiveren we een ontspannen, uitgelijnd en responsief fysiek lichaam. Het lichaam wordt het vat voor diepere beoefening.',
   },
   {
-    title: 'Energy',
+    title: 'Energie',
     chinese: '氣',
-    description: 'Qi, the vital life force, flows through all things. We learn to sense, guide, and harmonize this subtle energy within ourselves and in connection with the world.',
+    description: 'Qi, de vitale levenskracht, stroomt door alle dingen. We leren deze subtiele energie in onszelf waar te nemen, te leiden en te harmoniseren in verbinding met de wereld.',
   },
   {
-    title: 'Mind',
+    title: 'Geest',
     chinese: '心',
-    description: 'A calm and present mind directs all practice. Through intention (Yi) and awareness, we refine our consciousness and integrate body, energy, and spirit.',
+    description: 'Een kalme en aanwezige geest stuurt alle beoefening. Door intentie (Yi) en bewustzijn verfijnen we ons bewustzijn en integreren we lichaam, energie en geest.',
   },
 ]
 
@@ -22,12 +22,12 @@ export function ThreePillars() {
       <div className="max-w-6xl mx-auto px-6">
         {/* Section header */}
         <div className="text-center mb-16">
-          <span className="text-jade text-sm tracking-[0.3em] uppercase">Foundation</span>
+          <span className="text-jade text-sm tracking-[0.3em] uppercase">Fundament</span>
           <h2 className="font-serif text-3xl md:text-4xl text-ink mt-4 text-balance">
-            The Three Pillars
+            De Drie Pijlers
           </h2>
           <p className="text-ink/60 mt-4 max-w-xl mx-auto">
-            Taijiquan cultivates the whole person through three inseparable aspects
+            Taijiquan cultiveert de hele mens door drie onscheidbare aspecten
           </p>
         </div>
         
