@@ -71,7 +71,7 @@ export function Hero() {
           </div>
           
           <h1 className="font-serif text-4xl md:text-6xl lg:text-7xl text-cream tracking-wide mb-6 text-balance">
-            Small Boat To China
+            Slow Boat To China
           </h1>
           
           <p className="font-serif text-lg md:text-xl lg:text-2xl text-cream/70 italic mb-8 text-balance">

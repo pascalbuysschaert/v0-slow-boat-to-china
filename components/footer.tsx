@@ -51,7 +51,7 @@ export function Footer() {
         {/* Bottom text */}
         <div className="text-center text-sm text-cream/40">
           <p className="mb-2">
-            Small Boat To China · Yang-style Taijiquan · Leuven, Belgium
+            Slow Boat To China · Yang-style Taijiquan · Leuven, Belgium
           </p>
           <p>
             © {currentYear} All rights reserved

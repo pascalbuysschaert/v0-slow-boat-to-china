@@ -16,12 +16,12 @@ const inter = Inter({
 })
 
 export const metadata: Metadata = {
-  title: 'Small Boat To China | Yang-style Taijiquan in Leuven',
+  title: 'Slow Boat To China | Yang-style Taijiquan in Leuven',
   description: 'A journey inward through Yang-style Taijiquan. Authentic practice group in Leuven, Belgium, studying under the Chuan Cheng Academy lineage of Master Liang Dehua.',
   keywords: ['Taijiquan', 'Tai Chi', 'Yang style', 'Leuven', 'Belgium', 'martial arts', 'Qi', 'meditation'],
-  authors: [{ name: 'Small Boat To China' }],
+  authors: [{ name: 'Slow Boat To China' }],
   openGraph: {
-    title: 'Small Boat To China | Yang-style Taijiquan in Leuven',
+    title: 'Slow Boat To China | Yang-style Taijiquan in Leuven',
     description: 'A journey inward through Yang-style Taijiquan. Authentic practice group in Leuven, Belgium.',
     type: 'website',
   },

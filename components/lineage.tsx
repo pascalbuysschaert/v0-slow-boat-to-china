@@ -20,7 +20,7 @@ const lineageMembers = [
     role: 'Student of Master Liang',
   },
   {
-    name: 'Small Boat To China',
+    name: 'Slow Boat To China',
     chinese: null,
     role: 'Practice group in Leuven',
   },
