@@ -10,21 +10,44 @@ export function Hero() {
   }, [])
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-ink">
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-ocean-deep">
+      {/* Deep ocean base gradient */}
+      <div className="absolute inset-0 bg-gradient-to-b from-ocean-deep via-ocean-mid/80 to-ocean-surface/60" />
+      
+      {/* Underwater light rays */}
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_80%_50%_at_50%_-20%,oklch(0.45_0.08_220_/_0.25),transparent)]" />
+      
+      {/* Misty ocean atmosphere */}
+      <div className="absolute inset-0 ocean-mist" />
+      
+      {/* Subtle wave layers */}
+      <div className="absolute inset-0 opacity-20">
+        <div 
+          className="absolute inset-0"
+          style={{
+            background: `
+              repeating-linear-gradient(
+                180deg,
+                transparent,
+                transparent 60px,
+                oklch(0.50 0.06 220 / 0.08) 60px,
+                oklch(0.50 0.06 220 / 0.08) 62px
+              )
+            `,
+          }}
+        />
+      </div>
+      
+      {/* Surface shimmer */}
+      <div className="absolute top-0 left-0 right-0 h-1/3 bg-gradient-to-b from-ocean-surface/20 via-transparent to-transparent" />
+      
       {/* Ink wash texture overlay */}
-      <div className="absolute inset-0 ink-texture opacity-30 pointer-events-none" />
+      <div className="absolute inset-0 ink-texture opacity-20 pointer-events-none mix-blend-overlay" />
       
-      {/* Dark ink-wash atmospheric gradient */}
-      <div className="absolute inset-0 bg-gradient-to-b from-ink via-ink/95 to-ink/80" />
-      
-      {/* Misty atmospheric layers */}
-      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-ink/60 via-ink/80 to-ink opacity-90" />
-      <div className="absolute bottom-0 left-0 right-0 h-1/2 bg-gradient-to-t from-cream/5 via-transparent to-transparent" />
-      
-      {/* Decorative Chinese character */}
-      <div className="absolute top-1/4 right-8 md:right-16 lg:right-24 opacity-[0.06] select-none pointer-events-none">
+      {/* Decorative Chinese character - boat/ship */}
+      <div className="absolute top-1/4 right-8 md:right-16 lg:right-24 opacity-[0.04] select-none pointer-events-none">
         <span className="font-serif text-[20rem] md:text-[30rem] text-cream leading-none">
-          太
+          舟
         </span>
       </div>
       
@@ -35,9 +58,16 @@ export function Hero() {
             isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
           }`}
         >
-          {/* Small decorative element */}
+          {/* Small decorative wave element */}
           <div className="flex justify-center mb-8">
-            <div className="w-16 h-px bg-jade/60" />
+            <svg className="w-24 h-4 text-cream/30" viewBox="0 0 96 16" fill="none">
+              <path 
+                d="M0 8 Q12 2, 24 8 T48 8 T72 8 T96 8" 
+                stroke="currentColor" 
+                strokeWidth="1" 
+                fill="none"
+              />
+            </svg>
           </div>
           
           <h1 className="font-serif text-4xl md:text-6xl lg:text-7xl text-cream tracking-wide mb-6 text-balance">
@@ -83,8 +113,11 @@ export function Hero() {
         </div>
       </div>
       
-      {/* Bottom brushstroke divider - fades to cream */}
-      <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-cream-dark via-cream-dark/50 to-transparent" />
+      {/* Bottom transition - fades to cream like emerging from water */}
+      <div className="absolute bottom-0 left-0 right-0 h-40 bg-gradient-to-t from-cream-dark via-cream-dark/70 to-transparent" />
+      
+      {/* Subtle horizon line */}
+      <div className="absolute bottom-36 left-0 right-0 h-px bg-gradient-to-r from-transparent via-cream/10 to-transparent" />
     </section>
   )
 }
