@@ -75,7 +75,7 @@ export function Hero() {
           </h1>
           
           <p className="font-serif text-lg md:text-xl lg:text-2xl text-cream/70 italic mb-8 text-balance">
-            A journey inward through Yang-style Taijiquan
+            A comprehensive and authentic online Yang Taijiquan course
           </p>
           
           {/* Chinese characters accent */}
