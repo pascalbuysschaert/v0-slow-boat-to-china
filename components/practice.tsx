@@ -25,7 +25,7 @@ export function Practice() {
               We practice at HH Heverlee in Leuven, Belgium. Our sessions take place in a quiet, 
               dedicated space that allows for focused, mindful training.
             </p>
-            <p className="text-cream/50 mt-4 text-sm">
+            <p className="text-vermilion mt-4 text-sm font-bold">
               HH Heverlee, Leuven
             </p>
           </div>
@@ -42,7 +42,7 @@ export function Practice() {
               Regular group practice sessions are held weekly on Friday evenings. 
               Private instruction and intensive workshops are also available.
             </p>
-            <p className="text-jade/80 mt-4 font-serif text-lg">
+            <p className="text-vermilion mt-4 font-serif text-lg font-bold">
               Friday Evenings: 19:00 – 21:00
             </p>
           </div>
