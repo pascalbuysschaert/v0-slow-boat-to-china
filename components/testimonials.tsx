@@ -1,18 +1,18 @@
 const testimonials = [
   {
-    quote: "Taijiquan is voor mij meer dan beweging geworden—het is een dagelijkse meditatie, een manier om mezelf en de wereld om me heen te begrijpen. Het onderwijs hier is geduldig en diepgaand.",
+    quote: "Taijiquan has become more than movement for me—it is a daily meditation, a way to understand myself and the world around me. The teaching here is patient and profound.",
     author: "Maria K.",
-    years: "3 jaar beoefening",
+    years: "3 years of practice",
   },
   {
-    quote: "Ik kwam voor de gezondheidsvoordelen maar ontdekte iets veel diepers. Het authentieke lijn-onderwijs maakt alle verschil—je voelt de diepte van de traditie in elke beweging.",
+    quote: "I came for the health benefits but discovered something much deeper. The authentic lineage teaching makes all the difference—you can feel the depth of tradition in every movement.",
     author: "Thomas B.",
-    years: "5 jaar beoefening",
+    years: "5 years of practice",
   },
   {
-    quote: "Als iemand die eerder Tai Chi had geprobeerd, was ik verbaasd over het verschil dat authentiek onderwijs maakt. De aandacht voor detail en de filosofische diepte hebben mijn beoefening getransformeerd.",
+    quote: "As someone who had tried Tai Chi before, I was amazed at the difference authentic teaching makes. The attention to detail and philosophical depth have transformed my practice.",
     author: "Sophie L.",
-    years: "2 jaar beoefening",
+    years: "2 years of practice",
   },
 ]
 
@@ -22,9 +22,9 @@ export function Testimonials() {
       <div className="max-w-5xl mx-auto px-6">
         {/* Section header */}
         <div className="text-center mb-16">
-          <span className="text-jade text-sm tracking-[0.3em] uppercase">Stemmen</span>
+          <span className="text-jade text-sm tracking-[0.3em] uppercase">Voices</span>
           <h2 className="font-serif text-3xl md:text-4xl text-ink mt-4">
-            Van Onze Beoefenaars
+            From Our Practitioners
           </h2>
         </div>
         

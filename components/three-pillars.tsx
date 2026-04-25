@@ -1,18 +1,18 @@
 const pillars = [
   {
-    title: 'Lichaam',
+    title: 'Body',
     chinese: '身',
-    description: 'Door precieze houdingen en vloeiende bewegingen cultiveren we een ontspannen, uitgelijnd en responsief fysiek lichaam. Het lichaam wordt het vat voor diepere beoefening.',
+    description: 'Through precise postures and flowing movements, we cultivate a relaxed, aligned, and responsive physical body. The body becomes the vessel for deeper practice.',
   },
   {
-    title: 'Energie',
+    title: 'Energy',
     chinese: '氣',
-    description: 'Qi, de vitale levenskracht, stroomt door alle dingen. We leren deze subtiele energie in onszelf waar te nemen, te leiden en te harmoniseren in verbinding met de wereld.',
+    description: 'Qi, the vital life force, flows through all things. We learn to perceive, guide, and harmonize this subtle energy within ourselves and in connection with the world.',
   },
   {
-    title: 'Geest',
+    title: 'Mind',
     chinese: '心',
-    description: 'Een kalme en aanwezige geest stuurt alle beoefening. Door intentie (Yi) en bewustzijn verfijnen we ons bewustzijn en integreren we lichaam, energie en geest.',
+    description: 'A calm and present mind directs all practice. Through intention (Yi) and awareness, we refine our consciousness and integrate body, energy, and mind.',
   },
 ]
 
@@ -22,12 +22,12 @@ export function ThreePillars() {
       <div className="max-w-6xl mx-auto px-6">
         {/* Section header */}
         <div className="text-center mb-16">
-          <span className="text-jade text-sm tracking-[0.3em] uppercase">Fundament</span>
+          <span className="text-jade text-sm tracking-[0.3em] uppercase">Foundation</span>
           <h2 className="font-serif text-3xl md:text-4xl text-ink mt-4 text-balance">
-            De Drie Pijlers
+            The Three Pillars
           </h2>
           <p className="text-ink/60 mt-4 max-w-xl mx-auto">
-            Taijiquan cultiveert de hele mens door drie onscheidbare aspecten
+            Taijiquan cultivates the whole person through three inseparable aspects
           </p>
         </div>
         

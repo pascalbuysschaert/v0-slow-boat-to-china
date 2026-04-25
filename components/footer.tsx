@@ -9,7 +9,7 @@ export function Footer() {
           <svg 
             viewBox="0 0 100 100" 
             className="w-16 h-16 text-cream/20"
-            aria-label="Taiji (Yin-Yang) symbool"
+            aria-label="Taiji (Yin-Yang) symbol"
           >
             <circle cx="50" cy="50" r="48" fill="none" stroke="currentColor" strokeWidth="2" />
             <path
@@ -24,13 +24,13 @@ export function Footer() {
         {/* Navigation links */}
         <nav className="flex flex-wrap justify-center gap-x-8 gap-y-2 mb-8 text-sm">
           <a href="#about" className="hover:text-jade transition-colors">
-            Over Taijiquan
+            About Taijiquan
           </a>
           <a href="#practice" className="hover:text-jade transition-colors">
-            Beoefening
+            Practice
           </a>
           <a href="#lineage" className="hover:text-jade transition-colors">
-            De Lijn
+            Lineage
           </a>
           <a href="#contact" className="hover:text-jade transition-colors">
             Contact
@@ -51,10 +51,10 @@ export function Footer() {
         {/* Bottom text */}
         <div className="text-center text-sm text-cream/40">
           <p className="mb-2">
-            Small Boat To China · Yang-stijl Taijiquan · Leuven, België
+            Small Boat To China · Yang-style Taijiquan · Leuven, Belgium
           </p>
           <p>
-            © {currentYear} Alle rechten voorbehouden
+            © {currentYear} All rights reserved
           </p>
         </div>
         
