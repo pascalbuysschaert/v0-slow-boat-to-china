@@ -11,38 +11,17 @@ export function Hero() {
 
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-ocean-deep">
-      {/* Deep ocean base gradient */}
-      <div className="absolute inset-0 bg-gradient-to-b from-ocean-deep via-ocean-mid/80 to-ocean-surface/60" />
+      {/* Hero background image */}
+      <div 
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+        style={{ backgroundImage: 'url(/images/hero-bg.jpg)' }}
+      />
       
-      {/* Underwater light rays */}
-      <div className="absolute inset-0 bg-[radial-gradient(ellipse_80%_50%_at_50%_-20%,oklch(0.45_0.08_220_/_0.25),transparent)]" />
+      {/* Dark overlay for text readability */}
+      <div className="absolute inset-0 bg-gradient-to-b from-ocean-deep/70 via-ocean-deep/50 to-ocean-deep/80" />
       
-      {/* Misty ocean atmosphere */}
-      <div className="absolute inset-0 ocean-mist" />
-      
-      {/* Subtle wave layers */}
-      <div className="absolute inset-0 opacity-20">
-        <div 
-          className="absolute inset-0"
-          style={{
-            background: `
-              repeating-linear-gradient(
-                180deg,
-                transparent,
-                transparent 60px,
-                oklch(0.50 0.06 220 / 0.08) 60px,
-                oklch(0.50 0.06 220 / 0.08) 62px
-              )
-            `,
-          }}
-        />
-      </div>
-      
-      {/* Surface shimmer */}
-      <div className="absolute top-0 left-0 right-0 h-1/3 bg-gradient-to-b from-ocean-surface/20 via-transparent to-transparent" />
-      
-      {/* Ink wash texture overlay */}
-      <div className="absolute inset-0 ink-texture opacity-20 pointer-events-none mix-blend-overlay" />
+      {/* Subtle atmospheric overlay */}
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_80%_50%_at_50%_-20%,oklch(0.45_0.08_220_/_0.15),transparent)]" />
       
       {/* Decorative Chinese character - boat/ship */}
       <div className="absolute top-1/4 right-8 md:right-16 lg:right-24 opacity-[0.04] select-none pointer-events-none">
