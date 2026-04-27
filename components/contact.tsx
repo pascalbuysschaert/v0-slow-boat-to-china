@@ -38,10 +38,10 @@ export function Contact() {
         <div className="text-center mb-12">
           <span className="text-jade text-sm tracking-[0.3em] uppercase">Begin</span>
           <h2 className="font-serif text-3xl md:text-4xl text-ink mt-4 text-balance">
-            Start Your Journey
+            Begin Je Reis
           </h2>
           <p className="text-ink/60 mt-4">
-            Interested in practicing with us? Send us a message.
+            Interesse om met ons te oefenen? Stuur ons een bericht.
           </p>
         </div>
         
