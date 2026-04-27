@@ -6,7 +6,7 @@ export function About() {
         <div className="text-center mb-12">
           <span className="text-jade text-sm tracking-[0.3em] uppercase">The Art</span>
           <h2 className="font-serif text-3xl md:text-4xl text-ink mt-4 text-balance">
-            What is Taijiquan?
+            Wat is Taijiquan?
           </h2>
         </div>
         
@@ -18,22 +18,23 @@ export function About() {
         {/* Content */}
         <div className="space-y-6 text-ink/80 leading-relaxed text-lg">
           <p>
-            Taijiquan (太極拳) is an ancient Chinese internal martial art, rooted in 
-            Daoist philosophy and the principles of Yin and Yang. More than a fighting system, 
-            it is a path of self-cultivation—a practice that brings body, energy (Qi), and 
-            mind into harmony.
+            Taijiquan (太極拳) is een oude Chinese interne vechtkunst, geworteld in de 
+            daoïstische filosofie en de principes van Yin en Yang. Meer dan een vechtsysteem 
+            is het een pad van zelfcultivering — een praktijk die lichaam, energie (Qi) en 
+            geest in harmonie brengt.
           </p>
           
           <p>
-            The Yang style, known for its elegant, flowing movements, makes this profound 
-            art accessible to practitioners of all ages. Through patient practice, we develop 
-            relaxation, awareness, and an ever-deepening understanding of our own nature.
+            De Yang-stijl, bekend om zijn elegante, vloeiende bewegingen, maakt deze diepe 
+            kunst toegankelijk voor beoefenaars van alle leeftijden. Door geduldige oefening 
+            ontwikkelen we ontspanning, bewustzijn en een steeds dieper wordend begrip van 
+            onze eigen aard.
           </p>
           
           <p className="text-ink/60 italic">
-            Our group follows the authentic transmission of the Chuan Cheng Academy, studying 
-            under the guidance of Master Liang Dehua, whose teaching traces directly back 
-            to the lineage of Grandmaster Gu Lisheng.
+            Onze groep volgt de authentieke overdracht van de Chuan Cheng Academy, onder 
+            begeleiding van meester Liang Dehua, wiens onderricht direct teruggaat op de 
+            lijn van grootmeester Gu Lisheng.
           </p>
         </div>
         

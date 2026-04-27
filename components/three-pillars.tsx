@@ -1,18 +1,18 @@
 const pillars = [
   {
-    title: 'Body',
+    title: 'Lichaam',
     chinese: '身',
-    description: 'Through precise postures and flowing movements, we cultivate a relaxed, aligned, and responsive physical body. The body becomes the vessel for deeper practice.',
+    description: 'Door precieze houdingen en vloeiende bewegingen cultiveren we een ontspannen, gebalanceerd en responsief fysiek lichaam. Het lichaam wordt het vat voor een diepere beoefening.',
   },
   {
-    title: 'Energy',
+    title: 'Energie',
     chinese: '氣',
-    description: 'Qi, the vital life force, flows through all things. We learn to perceive, guide, and harmonize this subtle energy within ourselves and in connection with the world.',
+    description: 'Qi, de vitale levenskracht, stroomt door alles heen. We leren deze subtiele energie in onszelf waar te nemen, te geleiden en te harmoniseren, en in verbinding met de wereld om ons heen.',
   },
   {
-    title: 'Mind',
+    title: 'Geest',
     chinese: '心',
-    description: 'A calm and present mind directs all practice. Through intention (Yi) and awareness, we refine our consciousness and integrate body, energy, and mind.',
+    description: 'Een kalme en aanwezige geest stuurt de hele beoefening. Via intentie (Yi) en bewustzijn verfijnen we ons bewustzijn en integreren we lichaam, energie en geest.',
   },
 ]
 
@@ -24,10 +24,10 @@ export function ThreePillars() {
         <div className="text-center mb-16">
           <span className="text-jade text-sm tracking-[0.3em] uppercase">Foundation</span>
           <h2 className="font-serif text-3xl md:text-4xl text-ink mt-4 text-balance">
-            The Three Pillars
+            De Drie Pijlers
           </h2>
           <p className="text-ink/60 mt-4 max-w-xl mx-auto">
-            Taijiquan cultivates the whole person through three inseparable aspects
+            Taijiquan cultiveert de hele mens via drie onlosmakelijke aspecten
           </p>
         </div>
         
