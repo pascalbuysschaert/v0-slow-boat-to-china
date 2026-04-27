@@ -16,12 +16,24 @@ export function Contact() {
     e.preventDefault()
     setIsSubmitting(true)
     
-    // Simulate form submission
-    await new Promise(resolve => setTimeout(resolve, 1000))
-    
-    setIsSubmitting(false)
-    setIsSubmitted(true)
-    setFormState({ name: '', email: '', experience: '', message: '' })
+    try {
+      const response = await fetch('https://formspree.io/f/mpqkeogq', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formState),
+      })
+      
+      if (response.ok) {
+        setIsSubmitted(true)
+        setFormState({ name: '', email: '', experience: '', message: '' })
+      }
+    } catch (error) {
+      console.error('Form submission error:', error)
+    } finally {
+      setIsSubmitting(false)
+    }
   }
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
