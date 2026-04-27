@@ -3,7 +3,7 @@ import { About } from '@/components/about'
 import { ThreePillars } from '@/components/three-pillars'
 import { Practice } from '@/components/practice'
 import { Lineage } from '@/components/lineage'
-import { Testimonials } from '@/components/testimonials'
+
 import { Contact } from '@/components/contact'
 import { Footer } from '@/components/footer'
 
@@ -15,7 +15,6 @@ export default function Home() {
       <ThreePillars />
       <Practice />
       <Lineage />
-      <Testimonials />
       <Contact />
       <Footer />
     </main>
