@@ -1,10 +1,10 @@
 export function About() {
   return (
     <section id="about" className="py-24 md:py-32 bg-cream-dark">
-      <div className="max-w-3xl mx-auto px-6">
+      <div className="max-w-4xl mx-auto px-6">
         {/* Section header */}
         <div className="text-center mb-12">
-          <span className="text-jade text-sm tracking-[0.3em] uppercase">The Art</span>
+          <span className="text-jade text-sm tracking-[0.3em] uppercase">De Kunst</span>
           <h2 className="font-serif text-3xl md:text-4xl text-ink mt-4 text-balance">
             Wat is Taijiquan?
           </h2>
