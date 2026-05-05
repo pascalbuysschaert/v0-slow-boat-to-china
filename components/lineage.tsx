@@ -1,7 +1,3 @@
-'use client'
-
-import { useState } from 'react'
-
 interface LineageNode {
   name: string
   years?: string
@@ -11,7 +7,7 @@ interface LineageNode {
   isBroadBranch?: boolean
 }
 
-const mainLineage: LineageNode[] = [
+const allLineage: LineageNode[] = [
   {
     name: 'Yang Luchan',
     years: '1799–1872',
@@ -58,25 +54,6 @@ const mainLineage: LineageNode[] = [
     role: 'Practice group in Leuven (Belgium)',
     isMainLine: true,
     isActive: true,
-  },
-]
-
-const otherBranches: LineageNode[] = [
-  {
-    name: 'Yang Banhou',
-    years: '1837–1892',
-    role: '2nd generation (from Yang Luchan), limited transmission',
-  },
-  {
-    name: 'Yang Chengfu',
-    years: '1883–1936',
-    role: '3rd generation (from Yang Jianhou)',
-    isBroadBranch: true,
-  },
-  {
-    name: 'Zheng Manqing, Dong Yingjie, Yang Shouzhong, Fu Zhongwen et al.',
-    role: 'Broad transmission branch (from Yang Chengfu)',
-    isBroadBranch: true,
   },
 ]
 
@@ -154,14 +131,6 @@ function LineageEntry({ node }: { node: LineageNode }) {
 }
 
 export function Lineage() {
-  const [activeTab, setActiveTab] = useState<'main' | 'current' | 'branches'>('main')
-
-  const tabs = [
-    { id: 'main' as const, label: 'Main Shaohou Line' },
-    { id: 'current' as const, label: 'Current Group' },
-    { id: 'branches' as const, label: 'Other Branches' },
-  ]
-
   return (
     <section id="lineage" className="py-24 md:py-32 bg-cream-dark">
       <div className="max-w-4xl mx-auto px-6">
@@ -175,88 +144,25 @@ export function Lineage() {
             Authentic Taijiquan is transmitted from teacher to student in an 
             unbroken chain. We are honored to be part of this living tradition.
           </p>
-          
-          {/* Legend */}
-          <div className="flex justify-center gap-6 mt-6 text-xs flex-wrap">
-            <div className="flex items-center gap-2">
-              <div className="w-3 h-3 rounded-full bg-jade/20 border-2 border-jade" />
-              <span className="text-ink/60">Main Shaohou Line</span>
-            </div>
-            <div className="flex items-center gap-2">
-              <div className="w-3 h-3 rounded-full bg-vermilion border-2 border-vermilion" />
-              <span className="text-ink/60">Current Group</span>
-            </div>
-            <div className="flex items-center gap-2">
-              <div className="w-3 h-3 rounded-full bg-cream border-2 border-ink/30" />
-              <span className="text-ink/60">Other Branches</span>
-            </div>
-          </div>
-        </div>
-
-        {/* Tabs */}
-        <div className="flex justify-center gap-2 mb-8 flex-wrap">
-          {tabs.map((tab) => (
-            <button
-              key={tab.id}
-              onClick={() => setActiveTab(tab.id)}
-              className={`
-                px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200
-                ${activeTab === tab.id
-                  ? 'bg-jade text-cream'
-                  : 'bg-cream border border-border text-ink/60 hover:border-jade/30 hover:text-ink'
-                }
-              `}
-            >
-              {tab.label}
-            </button>
-          ))}
         </div>
         
         {/* Lineage list */}
         <div className="bg-cream rounded-xl p-4 md:p-6 border border-border">
-          {activeTab === 'main' && (
-            <div className="space-y-2">
-              {mainLineage.map((node, index) => {
-                const isIndented = node.name === 'Erik Elsemans' || node.name === 'Slow Boat To China'
-                return (
-                  <div key={node.name} className={`relative ${isIndented ? 'ml-6 md:ml-8' : ''}`}>
-                    {index < mainLineage.length - 1 && !isIndented && (
-                      <div className="absolute left-6 top-12 bottom-0 w-0.5 bg-jade/20 -mb-2" />
-                    )}
-                    {index > 0 && (
-                      <div className={`flex justify-start py-1 ${isIndented ? 'pl-0' : 'pl-5'}`}>
-                        <span className="text-jade/40 text-xs">▶</span>
-                      </div>
-                    )}
-                    <LineageEntry node={node} />
-                  </div>
-                )
-              })}
-            </div>
-          )}
-
-          {activeTab === 'current' && (
-            <div className="space-y-2">
-              {mainLineage.slice(-2).map((node, index) => (
-                <div key={node.name} className="relative">
+          <div className="space-y-2">
+            {allLineage.map((node, index) => {
+              const isIndented = node.name === 'Erik Elsemans' || node.name === 'Slow Boat To China'
+              return (
+                <div key={node.name} className={`relative ${isIndented ? 'ml-6 md:ml-8' : ''}`}>
                   {index > 0 && (
-                    <div className="flex justify-start pl-5 py-1">
+                    <div className={`flex justify-start py-1 ${isIndented ? 'pl-0' : 'pl-5'}`}>
                       <span className="text-jade/40 text-xs">▶</span>
                     </div>
                   )}
                   <LineageEntry node={node} />
                 </div>
-              ))}
-            </div>
-          )}
-
-          {activeTab === 'branches' && (
-            <div className="space-y-2">
-              {otherBranches.map((node) => (
-                <LineageEntry key={node.name} node={node} />
-              ))}
-            </div>
-          )}
+              )
+            })}
+          </div>
         </div>
 
       </div>
