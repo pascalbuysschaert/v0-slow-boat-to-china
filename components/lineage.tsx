@@ -216,19 +216,22 @@ export function Lineage() {
         <div className="bg-cream rounded-xl p-4 md:p-6 border border-border">
           {activeTab === 'main' && (
             <div className="space-y-2">
-              {mainLineage.map((node, index) => (
-                <div key={node.name} className="relative">
-                  {index < mainLineage.length - 1 && (
-                    <div className="absolute left-6 top-12 bottom-0 w-0.5 bg-jade/20 -mb-2" />
-                  )}
-                  {index > 0 && (
-                    <div className="flex justify-start pl-5 py-1">
-                      <span className="text-jade/40 text-xs">▶</span>
-                    </div>
-                  )}
-                  <LineageEntry node={node} />
-                </div>
-              ))}
+              {mainLineage.map((node, index) => {
+                const isIndented = node.name === 'Erik Elsemans' || node.name === 'Slow Boat To China'
+                return (
+                  <div key={node.name} className={`relative ${isIndented ? 'ml-6 md:ml-8' : ''}`}>
+                    {index < mainLineage.length - 1 && !isIndented && (
+                      <div className="absolute left-6 top-12 bottom-0 w-0.5 bg-jade/20 -mb-2" />
+                    )}
+                    {index > 0 && (
+                      <div className={`flex justify-start py-1 ${isIndented ? 'pl-0' : 'pl-5'}`}>
+                        <span className="text-jade/40 text-xs">▶</span>
+                      </div>
+                    )}
+                    <LineageEntry node={node} />
+                  </div>
+                )
+              })}
             </div>
           )}
 
@@ -256,14 +259,6 @@ export function Lineage() {
           )}
         </div>
 
-        {/* Footnote */}
-        <div className="mt-8 p-4 bg-ink/5 rounded-lg border border-ink/10">
-          <p className="text-sm text-ink/60 leading-relaxed">
-            <span className="font-semibold text-ink/70">Note:</span> Gu Lisheng studied primarily under Yang Shaohou, 
-            and after his death in 1930 also briefly under Yang Chengfu. Official lineage name: 
-            <span className="italic"> Yang Family Taijiquan Shaohou Lineage of Gu&apos;s School.</span>
-          </p>
-        </div>
       </div>
     </section>
   )
