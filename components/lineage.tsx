@@ -9,207 +9,159 @@ interface LineageNode {
   isMainLine?: boolean
   isActive?: boolean
   isBroadBranch?: boolean
-  children?: LineageNode[]
 }
 
-const lineageTree: LineageNode = {
-  name: 'Yang Luchan',
-  years: '1799–1872',
-  role: 'Founder Yang-style, 1st generation',
-  isMainLine: true,
-  children: [
-    {
-      name: 'Yang Banhou',
-      years: '1837–1892',
-      role: '2nd generation, limited transmission',
-      isMainLine: false,
-    },
-    {
-      name: 'Yang Jianhou',
-      years: '1839–1917',
-      role: '2nd generation',
-      isMainLine: true,
-      children: [
-        {
-          name: 'Yang Shaohou',
-          years: '1862–1930',
-          role: '3rd generation',
-          isMainLine: true,
-          children: [
-            {
-              name: 'Gu Lisheng / Gu Luping',
-              years: '1903–1978',
-              role: '4th generation',
-              isMainLine: true,
-              children: [
-                {
-                  name: 'Chi Qingsheng',
-                  years: 'b. 1948',
-                  role: '5th generation, last indoor student & lineage holder',
-                  isMainLine: true,
-                  children: [
-                    {
-                      name: 'Liang Dehua',
-                      years: '197x–',
-                      role: '6th generation, Chuan Cheng Academy',
-                      isMainLine: true,
-                      children: [
-                        {
-                          name: 'Elsemans',
-                          role: 'Certified Instructor',
-                          isMainLine: true,
-                          children: [
-                            {
-                              name: 'Slow Boat To China',
-                              role: 'Practice group in Leuven (Belgium)',
-                              isMainLine: true,
-                              isActive: true,
-                            },
-                          ],
-                        },
-                      ],
-                    },
-                  ],
-                },
-              ],
-            },
-          ],
-        },
-        {
-          name: 'Yang Chengfu',
-          years: '1883–1936',
-          role: '3rd generation',
-          isBroadBranch: true,
-          children: [
-            {
-              name: 'Zheng Manqing, Dong Yingjie, Yang Shouzhong, Fu Zhongwen et al.',
-              role: 'Broad transmission branch',
-              isBroadBranch: true,
-            },
-          ],
-        },
-      ],
-    },
-  ],
-}
+const mainLineage: LineageNode[] = [
+  {
+    name: 'Yang Luchan',
+    years: '1799–1872',
+    role: 'Founder Yang-style, 1st generation',
+    isMainLine: true,
+  },
+  {
+    name: 'Yang Jianhou',
+    years: '1839–1917',
+    role: '2nd generation',
+    isMainLine: true,
+  },
+  {
+    name: 'Yang Shaohou',
+    years: '1862–1930',
+    role: '3rd generation',
+    isMainLine: true,
+  },
+  {
+    name: 'Gu Lisheng / Gu Luping',
+    years: '1903–1978',
+    role: '4th generation',
+    isMainLine: true,
+  },
+  {
+    name: 'Chi Qingsheng',
+    years: 'b. 1948',
+    role: '5th generation, last indoor student & lineage holder',
+    isMainLine: true,
+  },
+  {
+    name: 'Liang Dehua',
+    years: '197x–',
+    role: '6th generation, Chuan Cheng Academy',
+    isMainLine: true,
+  },
+  {
+    name: 'Erik Elsemans',
+    role: 'Certified Instructor',
+    isMainLine: true,
+  },
+  {
+    name: 'Slow Boat To China',
+    role: 'Practice group in Leuven (Belgium)',
+    isMainLine: true,
+    isActive: true,
+  },
+]
 
-function TreeNode({ node, depth = 0, isLast = true }: { node: LineageNode; depth?: number; isLast?: boolean }) {
-  const [isExpanded, setIsExpanded] = useState(true)
-  const hasChildren = node.children && node.children.length > 0
+const otherBranches: LineageNode[] = [
+  {
+    name: 'Yang Banhou',
+    years: '1837–1892',
+    role: '2nd generation (from Yang Luchan), limited transmission',
+  },
+  {
+    name: 'Yang Chengfu',
+    years: '1883–1936',
+    role: '3rd generation (from Yang Jianhou)',
+    isBroadBranch: true,
+  },
+  {
+    name: 'Zheng Manqing, Dong Yingjie, Yang Shouzhong, Fu Zhongwen et al.',
+    role: 'Broad transmission branch (from Yang Chengfu)',
+    isBroadBranch: true,
+  },
+]
 
+function LineageEntry({ node }: { node: LineageNode }) {
   return (
-    <div className="relative">
-      {/* Node content */}
-      <div 
-        className={`
-          relative flex items-start gap-3 py-3 px-4 rounded-lg transition-all duration-300
-          ${node.isActive 
-            ? 'bg-vermilion/10 border-2 border-vermilion shadow-lg' 
-            : node.isMainLine 
-              ? 'bg-jade/5 border border-jade/30 hover:border-jade/50' 
-              : node.isBroadBranch
-                ? 'bg-ink/5 border border-ink/10 hover:border-ink/20'
-                : 'bg-cream border border-border hover:border-jade/20'
-          }
-          ${hasChildren ? 'cursor-pointer' : ''}
-        `}
-        onClick={() => hasChildren && setIsExpanded(!isExpanded)}
-      >
-        {/* Main line indicator */}
-        {node.isMainLine && !node.isActive && (
-          <div className="absolute left-0 top-0 bottom-0 w-1 bg-jade rounded-l-lg" />
-        )}
+    <div 
+      className={`
+        relative flex items-start gap-3 py-3 px-4 rounded-lg transition-all duration-300
+        ${node.isActive 
+          ? 'bg-vermilion/10 border-2 border-vermilion shadow-lg' 
+          : node.isMainLine 
+            ? 'bg-jade/5 border border-jade/30 hover:border-jade/50' 
+            : node.isBroadBranch
+              ? 'bg-ink/5 border border-ink/10 hover:border-ink/20'
+              : 'bg-cream border border-border hover:border-jade/20'
+        }
+      `}
+    >
+      {/* Main line indicator */}
+      {node.isMainLine && !node.isActive && (
+        <div className="absolute left-0 top-0 bottom-0 w-1 bg-jade rounded-l-lg" />
+      )}
+      {node.isActive && (
+        <div className="absolute left-0 top-0 bottom-0 w-1 bg-vermilion rounded-l-lg" />
+      )}
+
+      {/* Node marker */}
+      <div className={`
+        flex-shrink-0 w-4 h-4 rounded-full border-2 mt-1
+        ${node.isActive 
+          ? 'border-vermilion bg-vermilion' 
+          : node.isMainLine 
+            ? 'border-jade bg-jade/20' 
+            : 'border-ink/30 bg-cream'
+        }
+      `}>
         {node.isActive && (
-          <div className="absolute left-0 top-0 bottom-0 w-1 bg-vermilion rounded-l-lg" />
+          <div className="w-full h-full rounded-full animate-pulse bg-vermilion/50" />
         )}
-
-        {/* Node marker */}
-        <div className={`
-          flex-shrink-0 w-4 h-4 rounded-full border-2 mt-1
-          ${node.isActive 
-            ? 'border-vermilion bg-vermilion' 
-            : node.isMainLine 
-              ? 'border-jade bg-jade/20' 
-              : 'border-ink/30 bg-cream'
-          }
-        `}>
-          {node.isActive && (
-            <div className="w-full h-full rounded-full animate-pulse bg-vermilion/50" />
-          )}
-        </div>
-
-        {/* Content */}
-        <div className="flex-1 min-w-0">
-          <div className="flex items-center gap-2 flex-wrap">
-            <h4 className={`
-              font-serif text-base md:text-lg
-              ${node.isActive ? 'text-vermilion font-semibold' : node.isMainLine ? 'text-ink' : 'text-ink/70'}
-            `}>
-              {node.name}
-            </h4>
-            {node.years && (
-              <span className="text-xs text-ink/50 font-mono">
-                ({node.years})
-              </span>
-            )}
-            {hasChildren && (
-              <span className={`text-xs transition-transform duration-200 ${isExpanded ? 'rotate-90' : ''}`}>
-                ▶
-              </span>
-            )}
-          </div>
-          {node.role && (
-            <p className={`text-sm mt-0.5 ${node.isActive ? 'text-vermilion/70' : 'text-ink/50'}`}>
-              {node.role}
-            </p>
-          )}
-          {node.isMainLine && !node.isActive && !node.isBroadBranch && (
-            <span className="inline-block mt-1 text-[10px] uppercase tracking-wider text-jade/70 bg-jade/10 px-2 py-0.5 rounded">
-              Main Line
-            </span>
-          )}
-          {node.isBroadBranch && (
-            <span className="inline-block mt-1 text-[10px] uppercase tracking-wider text-ink/50 bg-ink/5 px-2 py-0.5 rounded">
-              Broad Branch
-            </span>
-          )}
-        </div>
       </div>
 
-      {/* Children */}
-      {hasChildren && isExpanded && (
-        <div className="ml-6 mt-2 relative">
-          {/* Vertical connector line */}
-          <div className={`
-            absolute left-2 top-0 bottom-4 w-0.5
-            ${node.isMainLine ? 'bg-gradient-to-b from-jade/40 to-jade/10' : 'bg-ink/10'}
-          `} />
-          
-          <div className="space-y-2">
-            {node.children!.map((child, index) => (
-              <div key={child.name} className="relative">
-                {/* Horizontal connector */}
-                <div className={`
-                  absolute left-2 top-6 w-4 h-0.5
-                  ${child.isMainLine ? 'bg-jade/40' : 'bg-ink/10'}
-                `} />
-                <div className="ml-6">
-                  <TreeNode 
-                    node={child} 
-                    depth={depth + 1} 
-                    isLast={index === node.children!.length - 1}
-                  />
-                </div>
-              </div>
-            ))}
-          </div>
+      {/* Content */}
+      <div className="flex-1 min-w-0">
+        <div className="flex items-center gap-2 flex-wrap">
+          <h4 className={`
+            font-serif text-base md:text-lg
+            ${node.isActive ? 'text-vermilion font-semibold' : node.isMainLine ? 'text-ink' : 'text-ink/70'}
+          `}>
+            {node.name}
+          </h4>
+          {node.years && (
+            <span className="text-xs text-ink/50 font-mono">
+              ({node.years})
+            </span>
+          )}
         </div>
-      )}
+        {node.role && (
+          <p className={`text-sm mt-0.5 ${node.isActive ? 'text-vermilion/70' : 'text-ink/50'}`}>
+            {node.role}
+          </p>
+        )}
+        {node.isMainLine && !node.isActive && !node.isBroadBranch && (
+          <span className="inline-block mt-1 text-[10px] uppercase tracking-wider text-jade/70 bg-jade/10 px-2 py-0.5 rounded">
+            Main Line
+          </span>
+        )}
+        {node.isBroadBranch && (
+          <span className="inline-block mt-1 text-[10px] uppercase tracking-wider text-ink/50 bg-ink/5 px-2 py-0.5 rounded">
+            Broad Branch
+          </span>
+        )}
+      </div>
     </div>
   )
 }
 
 export function Lineage() {
+  const [activeTab, setActiveTab] = useState<'main' | 'current' | 'branches'>('main')
+
+  const tabs = [
+    { id: 'main' as const, label: 'Main Shaohou Line' },
+    { id: 'current' as const, label: 'Current Group' },
+    { id: 'branches' as const, label: 'Other Branches' },
+  ]
+
   return (
     <section id="lineage" className="py-24 md:py-32 bg-cream-dark">
       <div className="max-w-4xl mx-auto px-6">
@@ -225,7 +177,7 @@ export function Lineage() {
           </p>
           
           {/* Legend */}
-          <div className="flex justify-center gap-6 mt-6 text-xs">
+          <div className="flex justify-center gap-6 mt-6 text-xs flex-wrap">
             <div className="flex items-center gap-2">
               <div className="w-3 h-3 rounded-full bg-jade/20 border-2 border-jade" />
               <span className="text-ink/60">Main Shaohou Line</span>
@@ -240,10 +192,68 @@ export function Lineage() {
             </div>
           </div>
         </div>
+
+        {/* Tabs */}
+        <div className="flex justify-center gap-2 mb-8 flex-wrap">
+          {tabs.map((tab) => (
+            <button
+              key={tab.id}
+              onClick={() => setActiveTab(tab.id)}
+              className={`
+                px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200
+                ${activeTab === tab.id
+                  ? 'bg-jade text-cream'
+                  : 'bg-cream border border-border text-ink/60 hover:border-jade/30 hover:text-ink'
+                }
+              `}
+            >
+              {tab.label}
+            </button>
+          ))}
+        </div>
         
-        {/* Lineage tree */}
-        <div className="bg-cream rounded-xl p-6 md:p-8 border border-border">
-          <TreeNode node={lineageTree} />
+        {/* Lineage list */}
+        <div className="bg-cream rounded-xl p-4 md:p-6 border border-border">
+          {activeTab === 'main' && (
+            <div className="space-y-2">
+              {mainLineage.map((node, index) => (
+                <div key={node.name} className="relative">
+                  {index < mainLineage.length - 1 && (
+                    <div className="absolute left-6 top-12 bottom-0 w-0.5 bg-jade/20 -mb-2" />
+                  )}
+                  {index > 0 && (
+                    <div className="flex justify-start pl-5 py-1">
+                      <span className="text-jade/40 text-xs">▶</span>
+                    </div>
+                  )}
+                  <LineageEntry node={node} />
+                </div>
+              ))}
+            </div>
+          )}
+
+          {activeTab === 'current' && (
+            <div className="space-y-2">
+              {mainLineage.slice(-2).map((node, index) => (
+                <div key={node.name} className="relative">
+                  {index > 0 && (
+                    <div className="flex justify-start pl-5 py-1">
+                      <span className="text-jade/40 text-xs">▶</span>
+                    </div>
+                  )}
+                  <LineageEntry node={node} />
+                </div>
+              ))}
+            </div>
+          )}
+
+          {activeTab === 'branches' && (
+            <div className="space-y-2">
+              {otherBranches.map((node) => (
+                <LineageEntry key={node.name} node={node} />
+              ))}
+            </div>
+          )}
         </div>
 
         {/* Footnote */}
