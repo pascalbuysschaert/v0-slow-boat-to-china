@@ -18,10 +18,10 @@ export function About() {
         {/* Content */}
         <div className="space-y-6 text-ink/80 leading-relaxed text-lg">
           <p>
-            Taijiquan (太極拳) is een oude Chinese interne vechtkunst, geworteld in de 
-            daoïstische filosofie en de principes van Yin en Yang. Meer dan een vechtsysteem 
-            is het een pad van zelfcultivering — een praktijk die lichaam, energie (Qi) en 
-            geest in harmonie brengt.
+            Taijiquan (太極拳), of Tai Chi Chuan, vaak afgekort tot Tai Chi, is een oude 
+            Chinese interne vechtkunst, geworteld in de taoïstische filosofie en de principes 
+            van Yin en Yang. Meer dan een vechtsysteem is het een pad van zelfcultivering — 
+            een praktijk die lichaam, energie (Qi) en geest in harmonie brengt.
           </p>
           
           <p>
@@ -33,20 +33,21 @@ export function About() {
           
           <p className="text-ink/60 italic">
             Onze groep volgt de authentieke overdracht van de Chuan Cheng Academy, onder 
-            begeleiding van meester Liang Dehua, wiens onderricht direct teruggaat op de 
-            lijn van grootmeester Gu Lisheng.
+            begeleiding van meester Liang Dehua, wiens onderricht rechtstreeks teruggaat op de 
+            lijn van grootmeester Gu Lisheng, die een leerling was van zowel Yang Shaohou als 
+            Yang Chengfu. Zie verder hieronder voor de herkomst (lineage) van onze stijl.
           </p>
         </div>
         
         {/* Link to academy */}
         <div className="text-center mt-12">
           <a 
-            href="https://taijiacademy.online" 
+            href="https://chuancheng-academy.com/" 
             target="_blank" 
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 text-jade hover:text-jade/80 transition-colors text-sm tracking-wide"
           >
-            <span>Visit Taiji Academy Online</span>
+            <span>Bezoek de Chuan Cheng Academy website</span>
             <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
             </svg>
