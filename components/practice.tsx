@@ -54,7 +54,10 @@ export function Practice() {
             die hun kunst verdiepen. Wat telt is oprechtheid in de beoefening en openheid om te leren.
           </p>
           <p className="text-jade mt-6 font-serif italic">
-            &ldquo;Een boom die je nauwelijks kunt omarmen komt voort uit een nietig zaadje.&rdquo; — Tao Te Ching, hoofdstuk 64
+            &ldquo;Een boom die je nauwelijks kunt omarmen komt voort uit een nietig zaadje.&rdquo;
+          </p>
+          <p className="text-jade/70 mt-2 text-sm">
+            — Tao Te Ching, hoofdstuk 64
           </p>
         </div>
       </div>
