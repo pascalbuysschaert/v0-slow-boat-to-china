@@ -16,14 +16,15 @@ const inter = Inter({
 })
 
 export const metadata: Metadata = {
-  title: 'Slow Boat To China | Yang-style Taijiquan in Leuven',
-  description: 'Een reis naar het innerlijke met authentieke Yang-stijl Taijiquan. Studying under the Chuan Cheng Academy lineage of Master Liang Dehua.',
-  keywords: ['Taijiquan', 'Tai Chi', 'Yang style', 'Leuven', 'Belgium', 'martial arts', 'Qi', 'meditation'],
+  title: 'Slow Boat To China | Yang-stijl Taijiquan in Leuven',
+  description: 'Authentieke Yang-stijl Taijiquan in Leuven. Wekelijkse groepslessen op vrijdagavond. Verbonden aan de Chuan Cheng Academy van meester Liang Dehua.',
+  keywords: ['Taijiquan', 'Tai Chi', 'Yang stijl', 'Leuven', 'België', 'tai chi lessen Leuven', 'taijiquan cursus', 'vechtkunst', 'Qi', 'meditatie'],
   authors: [{ name: 'Slow Boat To China' }],
   openGraph: {
-    title: 'Slow Boat To China | Yang-style Taijiquan in Leuven',
-    description: 'Een reis naar het innerlijke met authentieke Yang-stijl Taijiquan.',
+    title: 'Slow Boat To China | Yang-stijl Taijiquan in Leuven',
+    description: 'Authentieke Yang-stijl Taijiquan in Leuven. Wekelijkse lessen op vrijdagavond.',
     type: 'website',
+    url: 'https://slowboattochina.be',
   },
 }
 
@@ -33,13 +34,39 @@ export const viewport: Viewport = {
   initialScale: 1,
 }
 
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'SportsClub',
+  name: 'Slow Boat To China',
+  alternateName: 'Slow Boat to China Taijiquan',
+  description: 'Authentieke Yang-stijl Taijiquan in Leuven, België. Wekelijkse groepslessen op vrijdagavond onder begeleiding van gecertificeerd instructeur Erik Elsemans, verbonden aan de Chuan Cheng Academy van meester Liang Dehua.',
+  url: 'https://slowboattochina.be',
+  sport: 'Taijiquan',
+  address: {
+    '@type': 'PostalAddress',
+    addressLocality: 'Leuven',
+    addressRegion: 'Vlaams-Brabant',
+    addressCountry: 'BE',
+  },
+  location: {
+    '@type': 'Place',
+    name: 'HH Heverlee, Leuven',
+  },
+}
+
 export default function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en" className={`${notoSerif.variable} ${inter.variable} bg-background`}>
+    <html lang="nl" className={`${notoSerif.variable} ${inter.variable} bg-background`}>
+      <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
+      </head>
       <body className="font-sans antialiased">
         {children}
         {process.env.NODE_ENV === 'production' && <Analytics />}
