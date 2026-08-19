@@ -22,7 +22,7 @@ export function ThreePillars() {
       <div className="max-w-6xl mx-auto px-6">
         {/* Section header */}
         <div className="text-center mb-16">
-          <span className="text-jade text-sm tracking-[0.3em] uppercase">Foundation</span>
+          <span className="text-jade text-sm tracking-[0.3em] uppercase">Fundament</span>
           <h2 className="font-serif text-3xl md:text-4xl text-ink mt-4 text-balance">
             De Drie Pijlers
           </h2>
