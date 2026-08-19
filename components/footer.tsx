@@ -24,13 +24,13 @@ export function Footer() {
         {/* Navigation links */}
         <nav className="flex flex-wrap justify-center gap-x-8 gap-y-2 mb-8 text-sm">
           <a href="#about" className="hover:text-jade transition-colors">
-            About Taijiquan
+            Over Taijiquan
           </a>
           <a href="#practice" className="hover:text-jade transition-colors">
-            Practice
+            Lessen
           </a>
           <a href="#lineage" className="hover:text-jade transition-colors">
-            Lineage
+            Overdracht
           </a>
           <a href="#contact" className="hover:text-jade transition-colors">
             Contact
@@ -51,10 +51,10 @@ export function Footer() {
         {/* Bottom text */}
         <div className="text-center text-sm text-cream/40">
           <p className="mb-2">
-            Slow Boat To China · Yang-style Taijiquan · Leuven, Belgium
+            Slow Boat To China · Yang-stijl Taijiquan · Leuven, België
           </p>
           <p>
-            © {currentYear} All rights reserved
+            © {currentYear} Alle rechten voorbehouden
           </p>
         </div>
         

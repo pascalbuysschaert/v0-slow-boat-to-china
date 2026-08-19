@@ -4,9 +4,9 @@ export function Practice() {
       <div className="max-w-4xl mx-auto px-6">
         {/* Section header */}
         <div className="text-center mb-16">
-          <span className="text-jade text-sm tracking-[0.3em] uppercase">Join Us</span>
+          <span className="text-jade text-sm tracking-[0.3em] uppercase">Doe mee</span>
           <h2 className="font-serif text-3xl md:text-4xl text-cream mt-4 text-balance">
-            Our Practice
+            Lessen
           </h2>
         </div>
         

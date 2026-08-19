@@ -16,12 +16,12 @@ const inter = Inter({
 })
 
 export const metadata: Metadata = {
-  title: 'Slow Boat To China | Yang-style Taijiquan in Leuven',
-  description: 'Een reis naar het innerlijke met authentieke Yang-stijl Taijiquan. Studying under the Chuan Cheng Academy lineage of Master Liang Dehua.',
-  keywords: ['Taijiquan', 'Tai Chi', 'Yang style', 'Leuven', 'Belgium', 'martial arts', 'Qi', 'meditation'],
+  title: 'Slow Boat To China | Yang-stijl Taijiquan in Leuven',
+  description: 'Een reis naar het innerlijke met authentieke Yang-stijl Taijiquan. Onder de begeleiding van de Chuan Cheng Academy-lijn van meester Liang Dehua.',
+  keywords: ['Taijiquan', 'Tai Chi', 'Yang-stijl', 'Leuven', 'België', 'vechtkunst', 'Qi', 'meditation'],
   authors: [{ name: 'Slow Boat To China' }],
   openGraph: {
-    title: 'Slow Boat To China | Yang-style Taijiquan in Leuven',
+    title: 'Slow Boat To China | Yang-stijl Taijiquan in Leuven',
     description: 'Een reis naar het innerlijke met authentieke Yang-stijl Taijiquan.',
     type: 'website',
   },
@@ -39,7 +39,7 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en" className={`${notoSerif.variable} ${inter.variable} bg-background`}>
+    <html lang="nl" className={`${notoSerif.variable} ${inter.variable} bg-background`}>
       <body className="font-sans antialiased">
         {children}
         {process.env.NODE_ENV === 'production' && <Analytics />}
