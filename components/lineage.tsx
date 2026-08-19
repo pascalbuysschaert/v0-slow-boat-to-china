@@ -11,47 +11,47 @@ const allLineage: LineageNode[] = [
   {
     name: 'Yang Luchan',
     years: '1799–1872',
-    role: 'Founder Yang-style, 1st generation',
+    role: 'Grondlegger Yang-stijl, 1e generatie',
     isMainLine: true,
   },
   {
     name: 'Yang Jianhou',
     years: '1839–1917',
-    role: '2nd generation',
+    role: '2e generatie',
     isMainLine: true,
   },
   {
     name: 'Yang Shaohou',
     years: '1862–1930',
-    role: '3rd generation',
+    role: '3e generatie',
     isMainLine: true,
   },
   {
     name: 'Gu Lisheng / Gu Luping',
     years: '1903–1978',
-    role: '4th generation',
+    role: '4e generatie',
     isMainLine: true,
   },
   {
     name: 'Chi Qingsheng',
     years: 'b. 1948',
-    role: '5th generation, last indoor student & lineage holder',
+    role: '5e generatie, laatste indoorstudent & lijnhouder',
     isMainLine: true,
   },
   {
     name: 'Liang Dehua',
     years: '197x–',
-    role: '6th generation, Chuan Cheng Academy',
+    role: '6e generatie, Chuan Cheng Academy',
     isMainLine: true,
   },
   {
     name: 'Erik Elsemans',
-    role: 'Certified Instructor',
+    role: 'Gecertificeerd Instructeur',
     isMainLine: true,
   },
   {
     name: 'Slow Boat To China',
-    role: 'Practice group in Leuven (Belgium)',
+    role: 'Praktijkgroep in Leuven (België)',
     isMainLine: true,
     isActive: true,
   },
@@ -117,12 +117,12 @@ function LineageEntry({ node }: { node: LineageNode }) {
         )}
         {node.isMainLine && !node.isActive && !node.isBroadBranch && (
           <span className="inline-block mt-1 text-[10px] uppercase tracking-wider text-jade/70 bg-jade/10 px-2 py-0.5 rounded">
-            Main Line
+            Hoofdlijn
           </span>
         )}
         {node.isBroadBranch && (
           <span className="inline-block mt-1 text-[10px] uppercase tracking-wider text-ink/50 bg-ink/5 px-2 py-0.5 rounded">
-            Broad Branch
+            Brede Vertakking
           </span>
         )}
       </div>
@@ -136,13 +136,12 @@ export function Lineage() {
       <div className="max-w-4xl mx-auto px-6">
         {/* Section header */}
         <div className="text-center mb-16">
-          <span className="text-jade text-sm tracking-[0.3em] uppercase">Transmission</span>
+          <span className="text-jade text-sm tracking-[0.3em] uppercase">Overdracht</span>
           <h2 className="font-serif text-3xl md:text-4xl text-ink mt-4 text-balance">
-            The Lineage
+            De Overdracht
           </h2>
           <p className="text-ink/60 mt-4 max-w-xl mx-auto leading-relaxed">
-            Authentic Taijiquan is transmitted from teacher to student in an 
-            unbroken chain. We are honored to be part of this living tradition.
+            Authentieke Taijiquan wordt van leraar op leerling overgedragen in een ononderbroken keten. Het is een eer om deel uit te maken van deze levende traditie.
           </p>
         </div>
         
