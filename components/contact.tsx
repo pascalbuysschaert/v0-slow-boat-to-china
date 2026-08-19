@@ -59,7 +59,7 @@ export function Contact() {
         {/* Location info */}
         <div className="text-center mb-10 py-4 border-y border-border">
           <p className="text-ink/70">
-            <span className="text-jade">✦</span> Gevestigd in <strong>Leuven, Belgium</strong>
+            <span className="text-jade">✦</span> Gevestigd in <strong>Leuven, België</strong>
           </p>
         </div>
         
@@ -119,7 +119,7 @@ export function Contact() {
                 className="w-full px-4 py-3 bg-cream border border-border rounded-lg focus:border-jade focus:ring-1 focus:ring-jade/20 outline-none transition-colors text-ink"
               >
                 <option value="">Kies je ervaringsniveau</option>
-                <option value="none">Complete beginner</option>
+                <option value="none">Volledige beginner</option>
                 <option value="some">Enige ervaring met Tai Chi</option>
                 <option value="intermediate">Gemiddeld niveau</option>
                 <option value="advanced">Gevorderd / vele jaren ervaring</option>
