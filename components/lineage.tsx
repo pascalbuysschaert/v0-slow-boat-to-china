@@ -138,7 +138,7 @@ export function Lineage() {
         <div className="text-center mb-16">
           <span className="text-jade text-sm tracking-[0.3em] uppercase">Overdracht</span>
           <h2 className="font-serif text-3xl md:text-4xl text-ink mt-4 text-balance">
-            De Overdracht
+            De Overlevering
           </h2>
           <p className="text-ink/60 mt-4 max-w-xl mx-auto leading-relaxed">
             Authentieke Taijiquan wordt van leraar op leerling overgedragen in een ononderbroken keten. Het is een eer om deel uit te maken van deze levende traditie.

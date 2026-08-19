@@ -45,7 +45,7 @@ export function About() {
             href="https://chuancheng-academy.com/" 
             target="_blank" 
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 text-jade hover:text-jade/80 transition-colors text-sm tracking-wide"
+            className="inline-flex items-center gap-2 px-4 py-2 rounded-md border border-jade/30 bg-jade/5 text-jade hover:bg-jade/10 hover:border-jade/50 transition-colors text-sm tracking-wide font-semibold underline underline-offset-4"
           >
             <span>Bezoek de Chuan Cheng Academy website</span>
             <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">

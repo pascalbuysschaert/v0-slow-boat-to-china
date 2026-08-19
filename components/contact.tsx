@@ -48,12 +48,11 @@ export function Contact() {
       <div className="max-w-2xl mx-auto px-6">
         {/* Section header */}
         <div className="text-center mb-12">
-          <span className="text-jade text-sm tracking-[0.3em] uppercase">Begin</span>
           <h2 className="font-serif text-3xl md:text-4xl text-ink mt-4 text-balance">
             Begin Je Reis
           </h2>
           <p className="text-ink/60 mt-4">
-            Interesse om met ons te oefenen? Stuur ons een bericht.
+            Interesse om met ons te oefenen? Stuur een bericht.
           </p>
         </div>
         
@@ -149,7 +148,7 @@ export function Contact() {
               disabled={isSubmitting}
               className="w-full py-4 bg-ink text-cream rounded-lg font-medium hover:bg-ink/90 focus:ring-2 focus:ring-jade focus:ring-offset-2 focus:ring-offset-cream-dark transition-all disabled:opacity-50 disabled:cursor-not-allowed"
             >
-              {isSubmitting ? 'Versturen...' : 'Send Bericht'}
+              {isSubmitting ? 'Versturen...' : 'Verstuur Bericht'}
             </button>
           </form>
         )}
