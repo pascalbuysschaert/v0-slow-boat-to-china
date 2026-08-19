@@ -34,7 +34,7 @@ const allLineage: LineageNode[] = [
   },
   {
     name: 'Chi Qingsheng',
-    years: 'b. 1948',
+    years: '°1948',
     role: '5e generatie, laatste indoorstudent & lijnhouder',
     isMainLine: true,
   },
